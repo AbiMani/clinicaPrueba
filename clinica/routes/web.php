@@ -20,6 +20,11 @@ Route::post('medico','MedicoController@store');
 
 Route::get('consultarMedico','MedicoController@consultarMedicos');
 
-Route::get('consultarMedico','MedicoController@index');
+Route::get('consMedico','MedicoController@index');
 
+Route::get('expediente','ExpedienteController@expedientes');
+
+Route::post('expediente','ExpedienteController@store');
+
+Route::get('consPaciente','ExpedienteController@index');
 
