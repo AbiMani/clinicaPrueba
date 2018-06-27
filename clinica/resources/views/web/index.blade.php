@@ -6,7 +6,7 @@
           <div class="brand">
             <h1 class="brand_name"><a href="./">Clinica</a></h1>
             <p class="brand_slogan">Betel</p>
-          </div><a href="callto:#" class="fa-phone">7127-7179</a>
+          </div><a href="callto:#" class="fa-phone">2531-2078</a>
           <p>Recuede que estamos disponibles para que nos llame las 24 horas al día</p>
         </div>
         <div id="stuck_container" class="stuck_container">
@@ -16,30 +16,17 @@
                 <li class="active"><a href="./">Home</a>
                 </li>
                 <li><a href="index-1.html">Conocenos</a>
-                  <ul>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Conse ctetur adipisicing</a></li>
-                    <li><a href="#">Elit sed do eiusmod
-                        <ul>
-                          <li><a href="#">Lorem ipsum</a></li>
-                          <li><a href="#">Conse adipisicing</a></li>
-                          <li><a href="#">Sit amet dolore</a></li>
-                        </ul></a></li>
-                    <li><a href="#">Incididunt ut labore</a></li>
-                    <li><a href="#">Et dolore magna</a></li>
-                    <li><a href="#">Ut enim ad minim</a></li>
-                  </ul>
                 </li>
                 <li><a href="./">Medicos</a>
                   <ul>
                       <li><a href="{!! url('medico') !!}">Ingresar medico</a></li>
-                      <li><a href="{!! url('consultarMedico') !!}">Consultar medico</a></li>
+                      <li><a href="{!! url('consMedico') !!}">Consultar medico</a></li>
                   </ul>
                 </li>
                 <li><a href="index-3.html">Expediente</a>
                   <ul>
-                      <li><a href="#">Ingresar paciente</a></li>
-                      <li><a href="#">Consultar paciente</a></li>
+                      <li><a href="{!! url('expediente') !!}">Ingresar paciente</a></li>
+                      <li><a href="{!! url('consPaciente') !!}">Consultar paciente</a></li>
                   </ul>
                 </li>
               </ul>
@@ -101,8 +88,8 @@
                     <div class="icon fa-comments"></div>
                   </div>
                   <div class="box_cnt__no-flow">
-                    <h3><a href="#">Incididunt ut labore et dolore</a></h3>
-                    <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor</p>
+                    <h3><a href="#">consultar Paciente</a></h3>
+                    <p>Permite consultar los expidientes guardados </p>
                   </div>
                 </div>
               </li>
@@ -112,18 +99,18 @@
                     <div class="icon fa-group"></div>
                   </div>
                   <div class="box_cnt__no-flow">
-                    <h3><a href="medico">ingreso de medico</a></h3>
+                    <h3><a href="medico">Ingreso de medicos</a></h3>
                     <p>Permite ingresar un nuevo medico.</p>
                   </div>
                 </div>
                 <hr>
                 <div data-wow-delay="0.4s" class="box wow fadeInRight">
                   <div class="box_aside">
-                    <div class="icon fa-thumbs-up"></div>
+                    <div class="icon fa-comments"></div>
                   </div>
                   <div class="box_cnt__no-flow">
-                    <h3><a href="#">Incididunt ut labore et dolore</a></h3>
-                    <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                    <h3><a href="#">consultar medico</a></h3>
+                    <p>Permite ver los datos de los medicos que trabajan en la clinica</p>
                   </div>
                 </div>
               </li>
@@ -142,7 +129,7 @@
                     <div class="icon2 fa-map-marker"></div>
                   </div>
                   <div class="box_cnt__no-flow">
-                    <address>4578 Marmora Road,Glasgow<br/> D04 89GR</address>
+                    <address>Barrio el angel, Rosario la paz<br/></address>
                   </div>
                 </div>
                 <div class="box">
@@ -157,7 +144,7 @@
                   <div class="box_aside">
                     <div class="icon2 fa-phone"></div>
                   </div>
-                  <div class="box_cnt__no-flow"><a href="callto:#">7127-7179</a></div>
+                  <div class="box_cnt__no-flow"><a href="callto:#">2531-2078</a></div>
                 </div>
               </li>
               <li class="grid_4">

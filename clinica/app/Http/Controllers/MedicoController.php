@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Http\Request\medicoFormRequest;
+use App\Http\Requests\medicoFormRequest;
 use App\Medico;
+use DB;
 
 class MedicoController extends Controller
 {
@@ -13,10 +14,11 @@ class MedicoController extends Controller
     }
 
     public function consultarMedicos(){
+        
     	return view('web.consultarMedico');
     }
 
-    public function store(Request $request){
+    public function store(medicoFormRequest $request){
     	$medico=new Medico(array(
     		'nombreDoctor'=>$request->get('nombreDoctor'),
     		'apellidoDoctor'=>$request->get('apellidoDoctor'),
@@ -29,6 +31,21 @@ class MedicoController extends Controller
     	$medico->save();
 
 
-    	return redirect('medico');
+    	return redirect('medico')->with('success','Guardado correctamente');;
+    }
+
+    public function index(){
+
+        $medicos=Medico::all();
+        return view('listarMedico',['medicos'=>$medicos]);
+    }
+
+    public function edit(){
+
+    }
+
+    public function destroy(Medico $medico)
+    {
+        $medico->delete();
     }
 }

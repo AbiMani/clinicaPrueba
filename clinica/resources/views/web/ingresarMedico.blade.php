@@ -19,12 +19,12 @@
                 <li><a href="./">Medicos</a>
                 	<ul>
                 		<li><a href="{!! url('medico') !!}">Ingresar medico</a></li>
-                    	<li><a href="{!! url('consultarMedico') !!}">Consultar medico</a></li>
+                    	<li><a href="{!! url('consMedico') !!}">Consultar medico</a></li>
                 	</ul>
                 </li>
                 <li><a href="index-3.html">Expediente</a>
                 	<ul>
-                      <li><a href="#">Ingresar paciente</a></li>
+                      <li><a href="{!! url('expediente')!!}">Ingresar paciente</a></li>
                       <li><a href="#">Consultar paciente</a></li>
                   </ul>
                 </li>
@@ -38,6 +38,22 @@
     <div class="content"> 
       <h1><b>Ingresar medico</b></h1>
     </div>
+
+    @if (count($errors)>0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if (session('success'))
+        <div>
+            {{ session('success') }}
+        </div>
+    @endif
+
     <form class="form-horizontal" id="formProducto" method="POST" >
       <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                     <div class="form-group">
@@ -75,7 +91,7 @@
                             <input class="form-control" type="integer" name="edadDoctor" id="edadDoctor" >
                         </div>
                     </div>
-            <button  class="btn2" type="submit">INGRESAR</button>
+            <button  class="btn2" type="submit">GUARDAR</button>
     </form>
 </body>
 <script src="{{ asset('js/script.js') }} "></script>
